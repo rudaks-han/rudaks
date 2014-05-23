@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- Main Definition -->
+	<definition name="main.definition" template="/WEB-INF/template/mainLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="rightMenu" value="/WEB-INF/template/rightMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp" />
+	</definition>
+	
+	<!-- default Definition -->
+	<definition name="default.definition" template="/WEB-INF/template/defaultLayout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- blank Definition -->
+	<definition name="blank.definition" template="/WEB-INF/template/blankLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- Error Definition -->
+	<definition name="error.definition" template="/WEB-INF/template/errorLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp" />
+	</definition>
+	
+	<!-- ########################## pages ############################-->	
+	<definition name="home" extends="main.definition">
+        <put-attribute name="title" value="File Protection – Keep your personal files personal in the cloud and desktop | DigitalQuick" />
+        <put-attribute name="metaDescription" value="DigitalQuick makes it easy to protect your personal and business files in the cloud and desktop. Protect, Control, and Audit your files with DigitalQuick!" />
+        <put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+    </definition>
+    
+</tiles-definitions>
