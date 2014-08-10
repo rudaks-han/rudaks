@@ -54,7 +54,6 @@ public class CommonController
         List <HashMap<String, Object>> categoryListByCount = postService.selectCategoryListByCount();
         model.addAttribute("categoryListByCount", categoryListByCount);
         
-        System.err.println("categoryList : " + categoryList);
         // 최근 posts 리스트 가져오기
         List <PostForm> recentPostList = postService.selectRecentPostList(10);
         model.addAttribute("recentPostList", recentPostList);

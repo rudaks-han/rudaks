@@ -3,11 +3,14 @@ package kr.co.rudaks.web.service;
 import java.util.HashMap;
 import java.util.List;
 
+import kr.co.rudaks.web.WebConfig;
 import kr.co.rudaks.web.bean.AttachFileForm;
 import kr.co.rudaks.web.bean.GuestbookForm;
 import kr.co.rudaks.web.bean.PostForm;
 import kr.co.rudaks.web.mapper.PostMapper;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -16,6 +19,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostServiceImpl implements IPostService
 {
+	private final static Logger logger = (Logger) LoggerFactory.getLogger(PostServiceImpl.class);
+	
 	@Autowired
 	PostMapper postMapper;
 	

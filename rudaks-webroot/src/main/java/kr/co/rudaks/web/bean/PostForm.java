@@ -34,21 +34,19 @@ public class PostForm
     private int rowsPerPage;
     private int startNo;
     private int endNo;
-    
+     
     public String getCreatedDateDisplay()
     {
         String createdDateDisplay = createdDate;
+        
         try
         {
-        	if (createdDate != null)
-        		createdDateDisplay = DateUtil.formatDateString(createdDate, WebPublic.DATE_FORMAT_YYYYMMDDHHMMSS, WebPublic.DATE_FORMAT_DISPLAY);
-        	else
-        		createdDateDisplay = createdDate;
+	        if (createdDate != null)
+	        	createdDateDisplay = DateUtil.formatDateString(createdDate, WebPublic.DATE_FORMAT_YYYYMMDDHHMMSS, WebPublic.DATE_FORMAT_DISPLAY);
+	        else
+	        	createdDateDisplay = createdDate;
         }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
+        catch (Exception e) {}
         return createdDateDisplay;
     }
 }

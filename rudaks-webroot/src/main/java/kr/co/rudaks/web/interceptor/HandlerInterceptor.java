@@ -76,13 +76,12 @@ public class HandlerInterceptor extends HandlerInterceptorAdapter
             String sessionId = request.getSession().getId();
             
             String accessLog = accessLogService.selectAccessLog(sessionId);
-            //System.err.println("accessLog : " + accessLog);
          
                 
         }
         catch (Exception e)
         {
-            System.err.println("HandlerInterceptor#preHandle : " + e.getMessage());
+        	logger.error(e.getMessage());
         }
         return true;
     }

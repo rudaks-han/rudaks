@@ -1,9 +1,14 @@
 package kr.co.rudaks.web;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import kr.co.rudaks.web.common.app.ConfigFactory;
 
 public class WebConfig 
 {	
+	private final static Logger logger = (Logger) LoggerFactory.getLogger(WebConfig.class);
+	
 	private static ConfigFactory configFactory = null;
 	
 	public static String getString(String key, String defaultValue)
@@ -16,7 +21,7 @@ public class WebConfig
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
         return result;
     }

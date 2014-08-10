@@ -95,7 +95,6 @@ public class GuestbookController extends CommonController
             
         guestbookNewValidator.validate(guestbookForm, bindingResult);
         
-        //System.err.println("files : " + postForm.getFiles());
         // 입력값 검증
         if (bindingResult.hasErrors())
         {
@@ -105,7 +104,6 @@ public class GuestbookController extends CommonController
         }   
         
         GeoipCountryForm geoipCountryForm = geoipCountryService.selectCountryByIp(request.getRemoteAddr());
-        System.err.println("::: " + geoipCountryForm.getCountryCode());
         
         // 한국이 아니라면 글을 못쓰게 한다.
         if (!"KR".equals(geoipCountryForm.getCountryCode()))
@@ -162,7 +160,6 @@ public class GuestbookController extends CommonController
         
         guestbookModifyValidator.validate(guestbookForm, bindingResult);
         
-        //System.err.println("files : " + postForm.getFiles());
         // 입력값 검증
         if (bindingResult.hasErrors())
         {
@@ -221,7 +218,6 @@ public class GuestbookController extends CommonController
         
         guestbookDeleteValidator.validate(guestbookForm, bindingResult);
         
-        //System.err.println("files : " + postForm.getFiles());
         // 입력값 검증
         if (bindingResult.hasErrors())
         {

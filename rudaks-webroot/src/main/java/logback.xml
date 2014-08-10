@@ -53,11 +53,11 @@
 	</appender>
 	
 	<root>
-		<level value="DEBUG" />
+		<level value="INFO" />
 		<appender-ref ref="FILE_ROLL_INFO" />
 	</root>
 	
-    <logger name="java.sql" level="DEBUG">
+    <logger name="java.sql" level="INFO">
         <appender-ref ref="FILE_ROLL_DEBUG" />
         <appender-ref ref="FILE_ROLL_ERROR" />
 		<!-- <appender-ref ref="STDOUT" /> -->

@@ -1,1 +1,1 @@
-mongod --dbpath=D:\_JAVA\MongoDB_2.6\data
+D:\_JAVA\mongodb-2.6\bin\mongod --dbpath=D:\_JAVA\MongoDB-2.6\data

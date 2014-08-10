@@ -31,6 +31,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,6 +53,10 @@ import com.mongodb.DBObject;
 @Controller
 public class MainController extends CommonController
 {    
+	//private Logger logger = (Logger)LoggerFactory.getLogger(this.getClass());
+	//final Logger logger = LoggerFactory.getLogger(MainController.class);
+	private final static Logger logger = (Logger) LoggerFactory.getLogger(MainController.class);
+	
     @Autowired
     public PostNewValidator postNewValidator; 
     
@@ -101,7 +107,6 @@ public class MainController extends CommonController
             BoardNavigatorByCount nav = new BoardNavigatorByCount(totalCount, postForm.getRowsPerPage(), page);
             model.addAttribute("navLinkHtml", nav.getExtendPageLink());
         }
-        
         return "home";
     }
     
@@ -341,8 +346,6 @@ public class MainController extends CommonController
         getNavigatorMenu(model); // 카테고리 리스트 가져오기
         
         postModifyValidator.validate(postForm, bindingResult);
-        System.err.println("content : "+postForm.getContent());
-        //System.err.println("files : " + postForm.getFiles());
         // 입력값 검증
         if (bindingResult.hasErrors())
         {
@@ -425,7 +428,6 @@ public class MainController extends CommonController
     @RequestMapping(value="/upload-attach", method=RequestMethod.POST, produces="application/json; charset=UTF-8")
     public String uploadAttach(@RequestParam("attachFile") MultipartFile attachFile) throws IOException 
     {
-        System.err.println("upload..............");
         //HttpSession session = request.getSession();
         /*loginInfo loginInfo = (LoginInfo) session.getAttribute(WebPublic.SESSION_LOGIN_INFO);*/
                 
@@ -437,8 +439,6 @@ public class MainController extends CommonController
         long fileSize = attachFile.getSize();       
         String fileExt = FilenameUtils.getExtension(originalfileName).toLowerCase();
         
-        System.err.println("originalfileName : " + originalfileName);
-        System.err.println("fileSize : " + fileSize);
         // 확장자는 png, jpg, gif, zip 종류만 허용
         /*boolean bAllowFileExt = false;
         String allowFileExt = WebConfig.getString("email.allow.fileext");
@@ -474,7 +474,6 @@ public class MainController extends CommonController
         
         File destFile = new File(tmpFilesDir + "/" + fileName);
         
-        System.err.println(tmpFilesDir + "/" + fileName);
         try
         {
             attachFile.transferTo(destFile);
@@ -482,7 +481,7 @@ public class MainController extends CommonController
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+        	logger.error("error", e);
         }
         System.out.println("file upload is end.");
         
@@ -492,8 +491,6 @@ public class MainController extends CommonController
         attachFileForm.setFilePath(fileName);
         attachFileForm.setFileName(originalfileName);
         attachFileForm.setFileSize(fileSize);
-        
-        System.err.println("fileName : " + fileName);
         
         ObjectMapper mapper = new ObjectMapper();
         return mapper.writeValueAsString(attachFileForm);
@@ -586,8 +583,6 @@ public class MainController extends CommonController
 	public byte[] download(@RequestParam(required = false, value = "filepath") String filePath, @RequestParam(required = false, value = "filename") String fileName, 
 			HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
-    	System.err.println("filepath : " + filePath);
-    	System.err.println("fileName : " + fileName);
     	byte[] bytes = null;
     	
 		if (fileName == null)
@@ -611,7 +606,6 @@ public class MainController extends CommonController
 	    
 	    String uploadDir = WebConfig.getString("attach.upload.dir");
 		File file = new File(uploadDir + "/" + filePath);
-		System.err.println("filepath : " + uploadDir + "/" + filePath);
 		if (file.exists())
 		{ 
 			bytes = FileCopyUtils.copyToByteArray(file);

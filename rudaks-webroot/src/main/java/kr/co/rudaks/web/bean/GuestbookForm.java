@@ -31,14 +31,15 @@ public class GuestbookForm
     public String getCreatedDateDisplay()
     {
         String createdDateDisplay = createdDate;
+        
         try
         {
-        	if (createdDate != null)
-        		createdDateDisplay = DateUtil.formatDateString(createdDate, WebPublic.DATE_FORMAT_YYYYMMDDHHMMSS, WebPublic.DATE_FORMAT_DISPLAY);
+	        if (createdDate != null)
+	        	createdDateDisplay = DateUtil.formatDateString(createdDate, WebPublic.DATE_FORMAT_YYYYMMDDHHMMSS, WebPublic.DATE_FORMAT_DISPLAY);
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+        	createdDateDisplay = createdDate;
         }
         return createdDateDisplay;
     }
