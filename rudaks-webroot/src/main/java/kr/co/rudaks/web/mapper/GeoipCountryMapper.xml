@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.rudaks.web.mapper.GeoipCountryMapper">
+	<resultMap id="resultGeoipCountryMap" type="GeoipCountryForm">
+        <result property="beginIp" column="begin_ip"/>
+        <result property="endIp" column="end_ip"/>
+        <result property="beginIpNum" column="begin_ip_num"/>
+        <result property="endIpNum" column="end_ip_num"/>
+        <result property="countryCode" column="country_code"/>
+        <result property="countryName" column="country_name"/>
+    </resultMap>
+    
+	<select id="selectCountryByIp" parameterType="string" resultMap="resultGeoipCountryMap">
+		SELECT begin_ip, end_ip, begin_ip_num, end_ip_num, country_code, country_name
+		FROM geoip_country
+		WHERE inet_to_bigint(#{ip}::inet) BETWEEN begin_ip_num AND end_ip_num
+	</select>
+</mapper>

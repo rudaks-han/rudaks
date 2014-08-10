@@ -1,0 +1,59 @@
+@CHARSET "utf-8";
+
+#notify {border-radius:3px; margin:9px; padding:8px 18px; font-size:12px; display:inline-block;}
+.notify-info {background:#e8f7ed; border:1px solid #30b661; color:#1BA84E; width: auto;}
+.notify-info p{line-height:150%; margin:0;}
+.notify-error {background:#fef1f1; border:1px solid #e2a8a8; color:#D46D6D;width: auto;}
+.notify-error p {line-height:150%; margin:0;}
+
+#notify_wrapper {width: 100%; position: fixed;  z-index: 1002; text-align: center;}
+.notify_pos_top {height: 0; top:0; margin-top: 3px; padding-top: 3px;}
+.notify_pos_top_center {height: 0; top:70px; margin-top: 3px; padding-top: 3px;}
+.notify_pos_top_left {height: 0; top:0; left: 20px; text-align:left; margin-top: 3px; padding-top: 3px;}
+.notify_pos_top_right {height: 0; top:0; right: 20px; text-align:right; margin-top: 3px; padding-top: 3px;}
+.notify_pos_center {height: 0; top:50%; text-align:center; }
+.notify_pos_center_left {height: 0; top:50%; text-align:left; left: 20px;}
+.notify_pos_center_right {height: 0; top:50%; text-align:right; right: 20px; }
+.notify_pos_bottom {height: auto; bottom:20px; text-align:center; margin-top: 3px; padding-top: 3px;}
+.notify_pos_bottom_left {height: auto; bottom:20px; text-align:left; }
+.notify_pos_bottom_right {height: auto; bottom:20px; text-align:right; right: 20px; }
+/* #modal {position: fixed; z-index:1101; left: 50%; top: 100px; margin: 0 0 0 -320px; background-color:#ffffff; } */
+.backgroundOverlay  { display:none; position:fixed; _position:absolute; height:100%; width:100%; top:0; left:0; background:#a6a6a6; border:1px solid #cecece; z-index:1000; }
+
+#modal {z-index:100001}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.attach-result {overflow-x:hidden; width:500px; white-space:nowrap; text-overflow:ellipsis; display:inline-block;}
+
+.blog-post-meta {margin-bottom:20px; color:#999;}
+.summernote-layer {max-width:618px;}
+
+.blog-post {margin-bottom:60px;}
+#footer {background-color:#f5f5f5}
+#footer {height:60px;}
+.container .credit {margin: 20px 0;}
+h2 {max-width:800px; word-wrap:break-word;}
+.post-content {max-width:800px; word-wrap:break-word;}
+
+.ellipsis {overflow:hidden; text-overflow:ellipsis; white-spacing:nowrap;}
+
+.guestbook-reply-margin {margin-left:50px;}

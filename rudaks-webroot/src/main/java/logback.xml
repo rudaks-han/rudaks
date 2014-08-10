@@ -60,7 +60,7 @@
     <logger name="java.sql" level="DEBUG">
         <appender-ref ref="FILE_ROLL_DEBUG" />
         <appender-ref ref="FILE_ROLL_ERROR" />
-		<appender-ref ref="STDOUT" />
+		<!-- <appender-ref ref="STDOUT" /> -->
     </logger>
     
     <logger name="kr.co.rudaks" level="INFO">

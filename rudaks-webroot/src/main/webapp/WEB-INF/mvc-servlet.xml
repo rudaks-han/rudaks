@@ -46,6 +46,8 @@
 	    </property>
 	</bean>
 	
+	<bean name="/bbs/view.jsp" class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+	
  	<mvc:resources mapping="/robots.txt" location="/" /> 
     <mvc:resources mapping="/static/**" location="/static/" />    
         

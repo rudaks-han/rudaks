@@ -1,44 +1,30 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=utf-8" %>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>Rudaks.co.kr</title>
-
-    <!-- <meta name="description" content="CloudStack is open source cloud computing software for creating, managing, and deploying infrastructure cloud services">
-
-    <meta itemprop="name" content="Apache Cloudstack">
-    <meta itemprop="description" content="CloudStack is open source cloud computing software for creating, managing, and deploying infrastructure cloud services">
-    <meta itemprop="image" content="https://cloudstack.apache.org/images/monkey-144.png">
-
-    <meta property="og:title" content="Apache Cloudstack">
-    <meta property="og:description" content="CloudStack is open source cloud computing software for creating, managing, and deploying infrastructure cloud services">
-    <meta property="og:site_name" content="Apache Cloudstack"/>
-    <meta property="og:image" content="https://cloudstack.apache.org/images/monkey-144.png">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Apache Cloudstack">
-    <meta name="twitter:description" content="CloudStack is open source cloud computing software for creating, managing, and deploying infrastructure cloud services">
-    <meta name="twitter:image:src" content="https://cloudstack.apache.org/images/monkey-144.png">
- -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel='shortcut icon' type='image/x-icon' href='/static/images/favicon.ico' />
+    <meta content="java 관련 프로그래밍 사이트" name="description" />
+    <meta content="rudaks, 자바, Java, Servlet, JSP, JDBC, Spring, iBatis, Framework, Linux, Unix, JavaScript, HTML, CSS, Web2.0, Ajax, DB, 데이타베이스, HTML5, Oracle" />
+    <meta content="<c:if test="${empty pageTitle}"><tiles:getAsString name="title"/></c:if><c:if test="${not empty pageTitle}"><c:out value="${pageTitle}" escapeXml="true" /></c:if>" property="og:title" />
+    <meta content="Java관련 프로그래밍 사이트" property="og:description" />
+    <meta content="http://www.rudaks.co.kr/static/images/favicon.ico" property="og:image" />
+    <meta content="http://rudaks.co.kr" property="og:url" />
+    <meta content="website" property="og:type" />
+    <meta content="Rudaks.co.kr" property="og:site_name" />
+    <meta name="google-site-verification" content="2-cT11turiVFaoJlpAkcd1eXrTKNB1F2m37CVkOLgMM" />
+ 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-
-    <link href="/static/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="/static/css/font-awesome.css" rel="stylesheet">
-    <link href="/static/css/bootswatch.min.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="icon" href="/images/favicon.ico">
-
-    <!-- Twitter Bootstrap and jQuery after this line. -->
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script>
-        $('.dropdown-toggle').dropdown();
-        $('.nav-collapse').collapse();
-    </script>
+	<title><c:if test="${empty pageTitle}"><tiles:getAsString name="title"/></c:if><c:if test="${not empty pageTitle}"><c:out value="${pageTitle}" escapeXml="true" /></c:if></title>
+	<%@ include file="/WEB-INF/jsp/include/commonScript.jsp" %>
   </head>
+  
 <!--[if IE 7 ]> <body class="ie7"> <![endif]-->
 <!--[if IE 8 ]> <body class="ie8"> <![endif]-->
 <!--[if IE 9 ]> <body class="ie9"> <![endif]-->
@@ -51,10 +37,10 @@
         <div class="bs-docs-section">
         	<div class="row">
 	        	<tiles:insertAttribute name="body" />
-        		<tiles:insertAttribute name="rightMenu" />
-            	<tiles:insertAttribute name="footer" />
+        		<tiles:insertAttribute name="navigatorMenu" />
             </div>
         </div>
     </div>
+    <tiles:insertAttribute name="footer" />
 </body>
 </html>

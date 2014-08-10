@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+	
+	<!-- <rule>
+	    <name>Redirect not www Check</name>
+	    <condition type="header" operator="notequal" name="X-Forwarded-Proto">https</condition>
+	    <condition name="host" operator="notequal">www.digitalquick.com</condition>
+	    <condition type="request-uri" operator="notequal">/livecheck</condition>
+	    <condition type="request-uri" operator="notequal">/robots.txt</condition>
+	    <condition type="request-uri" operator="notequal">/resources/*</condition>
+	    <from>^/(.*)</from>
+	    <to type="permanent-redirect">https://www.digitalquick.com/$1</to>
+	</rule>
+
+	<rule>
+	    <name>Redirect www Check</name>
+	    <condition type="header" operator="notequal" name="X-Forwarded-Proto">https</condition>
+	    <condition name="host" operator="equal">www.digitalquick.com</condition>
+	    <condition type="request-uri" operator="notequal">/livecheck</condition>
+	    <condition type="request-uri" operator="notequal">/robots.txt</condition>
+	    <condition type="request-uri" operator="notequal">/resources/*</condition>
+	    <from>^/(.*)</from>
+	    <to type="permanent-redirect">https://www.digitalquick.com/$1</to>
+    </rule>
+
+	<rule>
+	    <name>Redirect https Check</name>
+	    <condition type="header" operator="notequal" name="X-Forwarded-Proto">https</condition>
+	    <condition name="host" operator="equal">www.digitalquick.com</condition>
+	    <condition type="request-uri" operator="equal">(/manage*|/member*|/ajax*)</condition>
+	    <condition type="request-uri" operator="equal">/*</condition>
+	    <condition type="request-uri" operator="notequal">/resources/*</condition>
+	    <from>^/(.*)</from>
+	    <to type="permanent-redirect">https://www.digitalquick.com/$1</to>
+	</rule> -->
+	
+</urlrewrite>
