@@ -72,7 +72,7 @@ public class MainController extends CommonController
     @RequestMapping(value = "/", method = RequestMethod.GET)    
     public String index(@ModelAttribute PostForm postForm, HttpServletRequest request, Model model) throws Exception
     {
-    	getNavigatorMenu(model); // 카테고리 리스트 가져오기
+    	/*getNavigatorMenu(model); // 카테고리 리스트 가져오기
         
         postForm.setRowsPerPage(Util.str2i(WebConfig.getString("post.list.count"), 5));
         int page = postForm.getPage();
@@ -107,8 +107,9 @@ public class MainController extends CommonController
             BoardNavigatorByCount nav = new BoardNavigatorByCount(totalCount, postForm.getRowsPerPage(), page);
             model.addAttribute("navLinkHtml", nav.getExtendPageLink());
         }
-        return "home";
-    }
+        return "home";*/
+    	return "redirect:/home";
+    } 
     
     /**
      * @defgroup home 메인화면

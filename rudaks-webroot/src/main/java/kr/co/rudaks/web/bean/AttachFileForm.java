@@ -1,9 +1,11 @@
 package kr.co.rudaks.web.bean;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class AttachFileForm
+public class AttachFileForm implements Serializable
 {	
     private int postId;
     private int seq;

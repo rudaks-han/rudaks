@@ -1,9 +1,11 @@
 package kr.co.rudaks.web.bean;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class CategoryForm
+public class CategoryForm implements Serializable
 {
     private int id;
     private String category;

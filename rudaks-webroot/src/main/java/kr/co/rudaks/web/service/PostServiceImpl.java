@@ -35,13 +35,13 @@ public class PostServiceImpl implements IPostService
 	/**
 	 * 카테고리 목록 가져오기
 	 */
-	//@Cacheable("categoryCache")
+	@Cacheable("categoryCache")
 	public List<HashMap<String, Object>> selectCategoryList()
 	{
 	    return postMapper.selectCategoryList();
 	}
 	
-	//@Cacheable("postCache")
+	@Cacheable("postCache")
     public List<HashMap<String, Object>> selectCategoryListByCount()
     {
         return postMapper.selectCategoryListByCount();
@@ -50,7 +50,7 @@ public class PostServiceImpl implements IPostService
 	/**
 	 * Post 정보 가져오기
 	 */
-	//@Cacheable("postCache")
+	@Cacheable("postCache")
 	public PostForm selectPost(int id)
     {
         return postMapper.selectPost(id);
@@ -59,7 +59,7 @@ public class PostServiceImpl implements IPostService
 	/**
 	 * 첨부파일 리스트 가져오기
 	 */
-	//@Cacheable("postCache")
+	@Cacheable("postCache")
 	public List<AttachFileForm> selectAttachFileList(int postId)
 	{
 	    return postMapper.selectAttachFileList(postId);
@@ -68,7 +68,7 @@ public class PostServiceImpl implements IPostService
 	/**
 	 * 최근 등록된 post 가져오기
 	 */
-	//@Cacheable("postCache")
+	@Cacheable("postCache")
 	public List<PostForm> selectRecentPostList(int count)
 	{
 	    return postMapper.selectRecentPostList(count);
@@ -77,7 +77,7 @@ public class PostServiceImpl implements IPostService
 	/**
      * 최근 등록된 post 개수 가져오기
      */
-	//@Cacheable("postCache")
+	//@Cacheable(value = "postCache", key = "#p0.id")
     public int selectPostListCount(PostForm postForm)
     {
         return postMapper.selectPostListCount(postForm);
@@ -86,11 +86,11 @@ public class PostServiceImpl implements IPostService
 	/**	
      * 최근 등록된 post 가져오기
      */
-	//@Cacheable("postCache")
+	@Cacheable(value = "postCache", key="#p0")
     public List<PostForm> selectPostList(PostForm postForm)
     {
         return postMapper.selectPostList(postForm);
-    }
+    }  
 	 
 	/**
 	 * Post 입력
@@ -147,7 +147,7 @@ public class PostServiceImpl implements IPostService
 	    return 1;
 	}
 	
-	//@Cacheable("postCache")
+	@Cacheable("postCache")
 	public PostForm selectPostBySeq(int seq)
     {
         return postMapper.selectPostBySeq(seq);
@@ -170,13 +170,13 @@ public class PostServiceImpl implements IPostService
         return postMapper.selectGuestbookListCount(guestbookForm);
     }
 	
-	//@Cacheable("guestbookCache")
+	@Cacheable("guestbookCache")
 	public List<GuestbookForm> selectGuestbookList(GuestbookForm guestbookForm)
     {
         return postMapper.selectGuestbookList(guestbookForm);
     }
 	
-	//@Cacheable("guestbookCache")
+	@Cacheable("guestbookCache")
 	public GuestbookForm selectGuestbook(int id)
 	{
 	    return postMapper.selectGuestbook(id);

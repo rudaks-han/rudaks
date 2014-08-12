@@ -1,5 +1,6 @@
 package kr.co.rudaks.web.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 import kr.co.rudaks.web.WebPublic;
@@ -7,7 +8,7 @@ import kr.co.rudaks.web.util.DateUtil;
 import lombok.Data;
 
 @Data
-public class GuestbookForm
+public class GuestbookForm implements Serializable
 {
     private int id;
     private int ref;
