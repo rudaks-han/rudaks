@@ -75,8 +75,7 @@ public class HandlerInterceptor extends HandlerInterceptorAdapter
             
             String sessionId = request.getSession().getId();
             
-            String accessLog = accessLogService.selectAccessLog(sessionId);
-         
+            //String accessLog = accessLogService.selectAccessLog(sessionId);
                 
         }
         catch (Exception e)
