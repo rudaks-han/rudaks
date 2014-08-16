@@ -17,10 +17,7 @@
 						
 					</div>
 					
-					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d6e026320d3615"></script>
 					<div class="btn-addthis">
-						<div class="addthis_native_toolbox" style="width:500px; float:left" data-title="${entry.title}" data-url="http://rudaks.co.kr/post/${entry.id}"></div>
 						
 						<span style="float:right"><a href="/post/${entry.id}#disqus_thread" data-disqus-identifier="post_${entry.id}">comment</a></span>
 					</div>

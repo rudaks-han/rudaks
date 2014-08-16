@@ -36,10 +36,6 @@
 					</c:if>
 					</div>
 					
-					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d6e026320d3615"></script>
-					<div class="addthis_native_toolbox" style="margin-top:50px;" data-title="${postForm.title}" data-url="http://rudaks.co.kr/post/${postForm.id}"></div>	
-					
 					
 					<div style="margin-top:50px;">
 						<div id="disqus_thread"></div>
