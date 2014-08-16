@@ -21,7 +21,7 @@ $(function() {
 		codemirror: { // codemirror options
    			theme: 'cosmo'
   		},
-		height: 300,                 // set editor height
+		height: 400,                 // set editor height
 		minHeight: null,             // set minimum height of editor
 		maxHeight: null,             // set maximum height of editor
 		focus: false,                 // set focus to editable area after initializing summernote
@@ -119,6 +119,7 @@ $(function() {
                     <label for="inputname" class="col-lg-2 control-label">Category</label>
                     <div class="col-lg-10">
                       <sf:select class="form-control" path="category" id="category">
+                      	<option value="">선택하세요</option>
 		              	<c:forEach var="entry" items="${categoryList}" varStatus="loop">
 		              		<sf:option value="${entry.category}">${entry.name}</sf:option>
 		              	</c:forEach>

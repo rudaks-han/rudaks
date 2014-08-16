@@ -625,5 +625,17 @@ public class MainController extends CommonController
 	    response.setContentType("application/octet-stream");
 	    return bytes;
 	}
+    
+    @RequestMapping(value = "/404", method = RequestMethod.GET)
 
+    public String error_404() throws Exception
+    {
+        return "error.404";
+    }
+
+    @RequestMapping(value = "/500", method = RequestMethod.GET)
+    public String error_500() throws Exception
+    {
+        return "error.500";
+    }
 }

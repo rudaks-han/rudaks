@@ -15,11 +15,14 @@
 							<a type="button" href="/download?filename=${attach.fileName}&filepath=${attach.filePath}" class="btn btn-default btn-xs">${attach.fileName}</a>
 						</c:forEach>
 						
-						<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d6e026320d3615"></script>
-						<div class="addthis_native_toolbox" style="margin-top:50px;" data-title="${entry.title}" data-url="http://rudaks.co.kr/post/${entry.id}"></div>
+					</div>
+					
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d6e026320d3615"></script>
+					<div class="btn-addthis">
+						<div class="addthis_native_toolbox" style="width:500px; float:left" data-title="${entry.title}" data-url="http://rudaks.co.kr/post/${entry.id}"></div>
 						
-						<span><a href="/blog/${list.postName}#disqus_thread" data-disqus-identifier="post_${list.id}"></a></span>
+						<span style="float:right"><a href="/post/${entry.id}#disqus_thread" data-disqus-identifier="post_${entry.id}">comment</a></span>
 					</div>
 					</c:forEach>
 					<c:if test="${empty postList}">
@@ -33,3 +36,4 @@
 					</c:if>
 					
 				</div>
+				<%@ include file="/WEB-INF/jsp/include/disquscount.jsp" %>

@@ -59,7 +59,7 @@ public class PostServiceImpl implements IPostService
 	/**
 	 * 첨부파일 리스트 가져오기
 	 */
-	@Cacheable("postCache")
+	//@Cacheable("postCache")
 	public List<AttachFileForm> selectAttachFileList(int postId)
 	{
 	    return postMapper.selectAttachFileList(postId);

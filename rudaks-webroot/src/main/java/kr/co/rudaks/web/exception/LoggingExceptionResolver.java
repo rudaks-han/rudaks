@@ -30,7 +30,7 @@ public class LoggingExceptionResolver extends SimpleMappingExceptionResolver
         request.setAttribute("exception",e);  // request로 exception을 넘긴다.        
         e.printStackTrace();
         //return new ModelAndView(WebPublic.ServicePath.ERROR + "." + WebPublic.ServicePath.ERROR_500);
-        return null;
+        return new ModelAndView("error.500"); 
     }
     
 }
