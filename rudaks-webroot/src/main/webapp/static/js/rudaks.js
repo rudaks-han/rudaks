@@ -82,6 +82,7 @@ var modal = {
 		}
 		
 		$(document).on('keydown.backgroundOverlay', function(event) {
+			event.preventDefault();
 			if ($modal.length > 0 && event.keyCode && event.keyCode === jQuery.ui.keyCode.ESCAPE)
 			{
 				modal.hide();
@@ -172,11 +173,11 @@ function backgroundOverlay(flag, options)
 		if ($("#" + overlayId).length == 0)
 			$("<div id='" + overlayId + "' class='backgroundOverlay'></div>").appendTo(contentsId);
 		
-		var zIndex = 1000;
-		$('div').each(function(i) {						
+		var zIndex = 10000;
+		/*$('div').each(function(i) {						
 			if (parseInt($(this).css('z-index')) > zIndex)
 				zIndex = $(this).css('zIndex');
-		});
+		});*/
 		
 		$("#" + overlayId).css({
 	        "opacity": "0.6",
