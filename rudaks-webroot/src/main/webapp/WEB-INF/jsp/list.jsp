@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ include file="/WEB-INF/jsp/include/commonLib.jsp" %>
 				<div class="col-lg-8">
+					<div class="alert alert-warning" style="font-size:20px">'${categoryMap.name}'으로 분류된 글</div>
 					<c:forEach var="entry" items="${postList}" varStatus="loop">
 					<div class="blog-post">
 						<h2 class="blog-post-title"><a href="/post/${entry.id}"># ${entry.title}</a></h2>

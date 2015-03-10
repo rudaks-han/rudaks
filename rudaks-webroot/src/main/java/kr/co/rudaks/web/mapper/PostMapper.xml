@@ -63,6 +63,14 @@
 		WHERE A.delete_flag = 'N'
 	</select>
 	
+	<select id="selectCategoryByCategory" resultType="hashmap">
+		SELECT id, category, name, delete_flag, public_flag, sort_order, description, created_date, updated_date
+		FROM t_category
+		WHERE delete_flag = 'N'
+		AND public_flag = 'Y'
+		AND category = #{category}
+	</select>
+	
 	<select id="selectPost" parameterType="int" resultMap="resultPostMap">
 		SELECT id, category, (SELECT name FROM t_category WHERE category = A.category) AS category_name, username, email, view_count, attach_count, ipaddress, delete_flag, title, old_seq, content, created_date, updated_date
 		FROM t_post A

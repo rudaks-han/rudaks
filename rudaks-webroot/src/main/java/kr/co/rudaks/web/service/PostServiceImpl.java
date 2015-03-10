@@ -47,6 +47,12 @@ public class PostServiceImpl implements IPostService
         return postMapper.selectCategoryListByCount();
     }
 	
+	@Cacheable("postCache")
+    public HashMap<String, Object> selectCategoryByCategory(String category)
+    {
+        return postMapper.selectCategoryByCategory(category);
+    }
+	
 	/**
 	 * Post 정보 가져오기
 	 */

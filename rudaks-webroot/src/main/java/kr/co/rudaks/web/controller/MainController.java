@@ -199,7 +199,13 @@ public class MainController extends CommonController
         
         int totalCount = postService.selectPostListCount(postForm);
         
+        HashMap<String, Object> categoryMap = postService.selectCategoryByCategory(category);
         postForm.setCategory(category);
+        
+        if (categoryMap != null)
+        {
+        	model.addAttribute("categoryMap", categoryMap);
+        }
         
         List<PostForm> postList = postService.selectPostList(postForm);
                         
