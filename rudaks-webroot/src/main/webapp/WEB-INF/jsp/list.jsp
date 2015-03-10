@@ -3,14 +3,14 @@
 				<div class="col-lg-8">
 					<c:forEach var="entry" items="${postList}" varStatus="loop">
 					<div class="blog-post">
-						<h2 class="blog-post-title"><a href="/post/${entry.id}">${entry.title}</a></h2>
-						<p class="blog-post-meta">
+						<h2 class="blog-post-title"><a href="/post/${entry.id}"># ${entry.title}</a></h2>
+						<%-- <p class="blog-post-meta">
 							${entry.createdDateDisplay} by <a href="#">${entry.username}</a> | <a href="#">${entry.categoryName}</a>
 						</p>
+						<p>
 							${entry.content}
 						</p>
-						
-												
+						 --%>
 					</div>
 					</c:forEach>
 					<c:if test="${empty postList}">
