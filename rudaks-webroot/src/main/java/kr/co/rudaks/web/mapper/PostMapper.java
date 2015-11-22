@@ -12,6 +12,7 @@ public interface PostMapper
     public Integer selectLastInsertId();
     public List<HashMap<String, Object>> selectCategoryList();
     public List<HashMap<String, Object>> selectCategoryListByCount();
+    public HashMap<String, Object> selectCategoryByCategory(String category);
     public PostForm selectPost(int postId);
     public List<AttachFileForm> selectAttachFileList(int postId);
     public List<PostForm> selectRecentPostList(int count);

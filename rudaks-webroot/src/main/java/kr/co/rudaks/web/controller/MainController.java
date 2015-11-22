@@ -130,7 +130,7 @@ public class MainController extends CommonController
     { 
         getNavigatorMenu(model); // 카테고리 리스트 가져오기
         
-        postForm.setRowsPerPage(Util.str2i(WebConfig.getString("post.list.count"), 5));
+        postForm.setRowsPerPage(Util.str2i(WebConfig.getString("post.home.count"), 5));
         int page = postForm.getPage();
         if (page < 1)
             page = 1;
@@ -199,7 +199,13 @@ public class MainController extends CommonController
         
         int totalCount = postService.selectPostListCount(postForm);
         
+        HashMap<String, Object> categoryMap = postService.selectCategoryByCategory(category);
         postForm.setCategory(category);
+        
+        if (categoryMap != null)
+        {
+        	model.addAttribute("categoryMap", categoryMap);
+        }
         
         List<PostForm> postList = postService.selectPostList(postForm);
                         

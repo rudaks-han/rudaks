@@ -12,6 +12,7 @@ public interface IPostService
     Integer selectLastInsertId();
     List<HashMap<String, Object>> selectCategoryList();
     List<HashMap<String, Object>> selectCategoryListByCount();
+    HashMap<String, Object> selectCategoryByCategory(String category);
     PostForm selectPost(int id);
     List<AttachFileForm> selectAttachFileList(int postId);
     List<PostForm> selectRecentPostList(int count);
