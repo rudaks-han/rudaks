@@ -45,7 +45,7 @@ public class CommonController
     @Autowired
     private IPostService postService;
     
-    public void getNavigatorMenu(Model model)
+    public void getNavigatorMenu(final Model model)
     {
         // 카테고리 리스트 가져오기
         List <HashMap<String, Object>> categoryList = postService.selectCategoryList();

@@ -293,6 +293,37 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>yuicompressor-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compress</goal>
+							<goal>jslint</goal>
+						</goals>
+					</execution>
+					<execution>
+                        <id>default-jslint</id>
+                        <phase>process-sources-unbind</phase>
+                    </execution>
+				</executions>
+				<configuration>
+					<sourceDirectory>${project.basedir}/src/main/webapp/static/enomix-js/webapps</sourceDirectory>
+            		<outputDirectory>${project.basedir}/src/main/webapp/static/js/minify</outputDirectory>	
+            		<force>true</force>
+            		<jswarn>false</jswarn>
+            		<skip>true</skip>
+					<excludes>
+						<exclude>**/daumeditor/**/*.js</exclude>
+						<exclude>**/jqgrid/**/*.js</exclude>
+						<exclude>**/*_init.js</exclude>
+						<exclude>**/lang/*.js</exclude>
+						<exclude>**/*.min.js</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
 
 	</build>

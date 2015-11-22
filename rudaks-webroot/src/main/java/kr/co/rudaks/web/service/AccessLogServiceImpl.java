@@ -32,7 +32,7 @@ public class AccessLogServiceImpl implements IAccessLogService
     {
     	try
     	{
-    		mongoTemplate.save(JSON.parse(info), ACCESS_LOG_COLLECTION);
+    		//mongoTemplate.save(JSON.parse(info), ACCESS_LOG_COLLECTION);
     	}
     	catch (Exception e)
     	{
@@ -45,7 +45,7 @@ public class AccessLogServiceImpl implements IAccessLogService
     {
     	try
     	{
-    		mongoTemplate.save(JSON.parse(info), DOWNLOAD_LOG_COLLECTION);
+    		//mongoTemplate.save(JSON.parse(info), DOWNLOAD_LOG_COLLECTION);
     	}
     	catch (Exception e)
     	{
@@ -59,7 +59,7 @@ public class AccessLogServiceImpl implements IAccessLogService
         DBObject info = null;
         try
     	{
-        	info = mongoTemplate.findOne(new BasicQuery(new BasicDBObject(ACCESS_LOG_COLLECTION, sessionId)), BasicDBObject.class, ACCESS_LOG_COLLECTION_PK);
+        	//info = mongoTemplate.findOne(new BasicQuery(new BasicDBObject(ACCESS_LOG_COLLECTION, sessionId)), BasicDBObject.class, ACCESS_LOG_COLLECTION_PK);
 	    }
 		catch (Exception e)
 		{

@@ -24,7 +24,7 @@
 	
 	<!-- blank Definition -->
 	<definition name="blank.definition" template="/WEB-INF/template/blankLayout.jsp">
-		<put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+		<put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
 		<put-attribute name="body" value="" />
 	</definition>
 	
@@ -37,67 +37,67 @@
 	
 	<!-- ########################## pages ############################-->	
 	<definition name="home" extends="main.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
     </definition>
     
     <definition name="postByCategory" extends="main.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/post-by-category.jsp" />
     </definition>
     
     <definition name="post-new" extends="main.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/post-new.jsp" />
     </definition>
     
     <definition name="post-modify" extends="main.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/post-modify.jsp" />
     </definition>
         
     <definition name="post" extends="main.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/post.jsp" />
     </definition>
     
     <definition name="list" extends="main.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/list.jsp" />
     </definition>
     
     <definition name="login" extends="default.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
     </definition>
     
     <definition name="guestbook" extends="sub.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/guestbook/guestbook.jsp" />
     </definition>
     
     <definition name="guestbook.new" extends="sub.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/guestbook/new.jsp" />
     </definition>
     
     <definition name="guestbook.modify" extends="sub.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/guestbook/modify.jsp" />
     </definition>
     
     <definition name="guestbook.delete" extends="sub.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/guestbook/delete.jsp" />
     </definition>
@@ -108,12 +108,12 @@
     </definition> -->
     
     <definition name="error.404" extends="sub.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/error_404.jsp" />
     </definition>
     <definition name="error.500" extends="sub.definition">
-        <put-attribute name="title" value="Java 개발자 사이트 | Rudaks.co.kr" />
+        <put-attribute name="title" value="Java 개발자 사이트 | rudaks.pe.kr" />
         <put-attribute name="metaDescription" value="" />
         <put-attribute name="body" value="/WEB-INF/jsp/error_500.jsp" />
     </definition>

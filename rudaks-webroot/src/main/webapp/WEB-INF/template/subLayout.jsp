@@ -13,11 +13,11 @@
     <meta content="rudaks, 자바, Java, Servlet, JSP, JDBC, Spring, iBatis, Framework, Linux, Unix, JavaScript, HTML, CSS, Web2.0, Ajax, DB, 데이타베이스, HTML5, Oracle" />
     <meta content="<c:if test="${empty pageTitle}"><tiles:getAsString name="title"/></c:if><c:if test="${not empty pageTitle}"><c:out value="${pageTitle}" escapeXml="true" /></c:if>" property="og:title" />
     <meta content="Java관련 프로그래밍 사이트" property="og:description" />
-    <meta content="http://www.rudaks.co.kr/static/images/favicon.ico" property="og:image" />
-    <meta content="http://rudaks.co.kr" property="og:url" />
+    <meta content="http://www.rudaks.pe.kr/static/images/favicon.ico" property="og:image" />
+    <meta content="http://rudaks.pe.kr" property="og:url" />
     <meta content="website" property="og:type" />
-    <meta content="Rudaks.co.kr" property="og:site_name" />
-    <meta name="google-site-verification" content="2-cT11turiVFaoJlpAkcd1eXrTKNB1F2m37CVkOLgMM" />
+    <meta content="Rudaks.pe.kr" property="og:site_name" />
+    <meta name="google-site-verification" content="e-SDTpJcfy5zOx9XUozWr_SuANhK2rrqNUzBFRr9VqY" />
  
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">

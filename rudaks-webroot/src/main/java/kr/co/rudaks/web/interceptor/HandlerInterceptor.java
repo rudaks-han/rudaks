@@ -50,7 +50,14 @@ public class HandlerInterceptor extends HandlerInterceptorAdapter
                 info.put("referer", request.getHeader("referer"));
                 info.put("browser", browser.getName());
                 info.put("os", os.getName());
-                accessLogService.createAccessLog(info.toString());
+                try
+                {
+                	accessLogService.createAccessLog(info.toString());
+                }
+                catch (Exception e)
+                {
+                	System.out.println(e.getMessage());
+                }
             }
         }
                 

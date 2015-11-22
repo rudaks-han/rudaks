@@ -538,7 +538,7 @@ public class MainController extends CommonController
                 postForm.setAttachFileList(attachFileList);
             }
             model.addAttribute("postForm", postForm);
-            model.addAttribute("pageTitle", postForm.getTitle() + " | Rudaks.co.kr");
+            model.addAttribute("pageTitle", postForm.getTitle() + " | Rudaks.pe.kr");
         }
         return "post";
     }

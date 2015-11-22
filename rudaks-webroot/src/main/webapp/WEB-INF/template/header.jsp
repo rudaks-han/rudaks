@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/include/commonLib.jsp" %>
 			<div class="container">
             <div class="navbar-header">
-                <a href="/" class="navbar-brand">Rudaks.co.kr</a>
+                <a href="/" class="navbar-brand">Rudaks.pe.kr</a>
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
